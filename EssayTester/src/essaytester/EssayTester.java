@@ -7,6 +7,7 @@ package essaytester;
 
 /**
  * Essay and Document tester/client code
+ *
  * @author rodec8600
  */
 public class EssayTester {
@@ -16,6 +17,7 @@ public class EssayTester {
      */
     public static void main(String[] args) {
         Essay english = new Essay();
+        Report computersAreCool = new Report();
 
         //make some english essays and see if they're actually essays
         //also print pages and word amount
@@ -26,7 +28,13 @@ public class EssayTester {
             System.out.println("Pages:\t" + english.calculatePages());
             System.out.println("************");
         }
-        
+        for (int i = 500; i < 2500; i += 500) {
+            computersAreCool.setWords(i);
+            System.out.println("Words:\t" + computersAreCool.getWords());
+            System.out.println("Is a report:\t" + computersAreCool.validLength());
+            System.out.println("Pages:\t" + computersAreCool.calculatePages());
+            System.out.println("************");
+        }
     }
 
 }
